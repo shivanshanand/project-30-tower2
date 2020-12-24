@@ -22,9 +22,10 @@
       push();
       if(this.body.speed<3){
         var angle = this.body.angle;
+        translate(this.body.position.x,this.body.position.y); 
         rotate(angle);
         rectMode(CENTER);
-        rect(this.body.position.x,this.body.position.y, this.width, this.height);
+        rect(0,0, this.width, this.height);
       }
       else{
         World.remove(world,this.body);
